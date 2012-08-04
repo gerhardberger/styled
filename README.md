@@ -12,7 +12,7 @@ var foo = $('.foo').styled()
 
 console.log(foo.css)          // an object with all the styles
 console.log(foo.get('width')) // a spesific style 
-``
+```
 
 .styled(*filename*)
 -------------------
