@@ -3,6 +3,7 @@ Styled.js
 
 Styled is an easy way to get access to the CSS rules in Javascript using selectors.
 It is a jQuery plugin. It is useful for instance if you do not have inserted the element in the page, you can still access its CSS properties easily. It depends on Underscore.
+[Demo](http://felix.lovassy.hu/projects/gellert/styled/example.html)
 
 Example
 -------
