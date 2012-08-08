@@ -23,10 +23,10 @@ The *filename* is optional, if there is a filename (or more separated by a comma
 Methods
 -------
 
-<h3>.get(*property*)</h3>
+<h3>.get(property)</h3>
 It returns a spesific style (all of them accessable in the `css` field in the return of `.styled()`).
 
-<h3>.set(*key*, *value* || *options*)</h3>
+<h3>.set(key, value || options)</h3>
 You can pass in two strings (key, value) or an object, just in jQuery's `.css()`.
 
 ``` js
