@@ -1,0 +1,16 @@
+.foo {
+	color: black;
+	background: whiteSmoke;
+	font-size: 20px;
+	font-family: Arial, sans-serif;
+
+	width: 400px;
+}
+
+.foo #bar {
+	font-weight: bold;
+}
+
+.foo, div, a {
+	margin: 0 auto;
+}

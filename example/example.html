@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>styled.js example</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="example.css">
+
+	<style type="text/css">
+		.foo {
+			border: 1px solid #999;
+		}
+	</style>
+
+	<!-- JS
+  ================================================== -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../dependencies/underscore-min.js"></script>
+	<script type="text/javascript" src="../styled.js"></script>
+	<script type="text/javascript" src="huk.js"></script>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+		$(function() {
+			// Use the `.get()` method to get a specific one
+			var foo = $('.foo').styled()
+			console.log(foo.get('color'))
+			console.log(parseInt(foo.get('font-size')))
+
+			// Access form specific .css file
+			console.log($('.foo #bar').styled('example').get('font-weight'))
+
+
+			$('button').on('click', function() {
+				var foo = $('.foo').styled()
+
+				// Set one style
+				foo.set('color', '#CCC')
+
+				// Set more styles
+				foo.set({
+					'font-size': '14px'
+					, width: '250px'
+				})
+
+				/*var foo = $('.foo')
+				foo.css('color', '#CCC')
+
+				foo.css({
+					'font-size': '14px'
+					, width: '250px'
+				})*/
+			})
+
+			huk('.container')
+				.list({
+					items: _.range(40000)
+					, itemTag: 'div'
+					, justItems: true
+					, itemArgs: {
+						content: 'test <<index>>'
+						, class: 'foo'
+					}
+				})
+			.append()
+		})
+	</script>
+
+</head>
+<body>
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<div class="container">
+		<button>Change</button>
+	</div><!-- container -->
+
+<!-- End Document
+================================================== -->
+
+</body>
+</html>
