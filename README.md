@@ -26,8 +26,21 @@ Methods
 <h3>.get(*property*)</h3>
 It returns a spesific style (all of them accessable in the `css` field in the return of `.styled()`).
 
+<h3>.set(*key*, *value* || *options*)</h3>
+You can pass in two strings (key, value) or an object, just in jQuery's `.css()`.
+
+``` js
+  var foo = $('.foo').styled()
+  foo.set('width', '960px')
+  
+  foo.set({
+    color: '#999'
+    , 'font-size': '12px'
+    , 'font-weight': 'bold'
+  })
+```
+
 Further plans
 -------------
 
- * .set(*property*,*value*)
  * wrapper functions for special stuffs
