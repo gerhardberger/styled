@@ -67,7 +67,9 @@
 	}
 
 	Styled.prototype.get = function(key) {
-		return this.css[key].val
+		var v  = this.css[key].val
+			, v_ = parseInt(v)
+		return v_ === NaN ? v : v_
 	}
 
 	Styled.prototype.set = function(keys, value) {
