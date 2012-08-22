@@ -51,16 +51,14 @@
 			$('button').on('click', function() {
 				var foo = $('.foo').styled()
 
-				// Set one style
 				foo.set('color', '#CCC')
 
-				// Set more styles
 				foo.set({
 					'font-size': '14px'
 					, width: '250px'
 				})
 
-				/*var foo = $('.foo')
+				/*foo = $('.foo')
 				foo.css('color', '#CCC')
 
 				foo.css({
@@ -71,7 +69,7 @@
 
 			huk('.container')
 				.list({
-					items: _.range(1000)
+					items: _.range(10000)
 					, itemTag: 'div'
 					, justItems: true
 					, itemArgs: {
