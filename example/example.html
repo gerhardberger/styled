@@ -48,8 +48,9 @@
 			console.log($('.foo #bar').styled('example').get('font-weight'))
 
 
-			$('button').on('click', function() {
-				var foo = $('.foo').styled()
+			$('.styled').on('click', function() {
+				var start = new Date();
+				var foo = $.styled('.foo')
 
 				foo.set('color', '#CCC')
 
@@ -58,13 +59,24 @@
 					, width: '250px'
 				})
 
-				/*foo = $('.foo')
+				var end = Date.now();
+				var elapsed = end - start; // time in milliseconds
+				console.log(elapsed)
+			})
+
+			$('.jq').on('click', function() {
+				var start = new Date();
+				var foo = $('.foo')
+
 				foo.css('color', '#CCC')
 
 				foo.css({
 					'font-size': '14px'
 					, width: '250px'
-				})*/
+				})
+				var end = Date.now();
+				var elapsed = end - start; // time in milliseconds
+				console.log(elapsed)
 			})
 
 			huk('.container')
@@ -88,7 +100,8 @@
 	================================================== -->
 
 	<div class="container">
-		<button>Change</button>
+		<button class="styled">Change with styled</button>
+		<button class="jq">Change with jQuery</button>
 	</div><!-- container -->
 
 <!-- End Document

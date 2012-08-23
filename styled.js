@@ -95,4 +95,8 @@
 	$.fn.styled = function(f) {
 		return new Styled(this.selector, f);
 	};
+
+	$.styled = function(selector, f) {
+		return new Styled(selector, f);
+	};
 })(jQuery, _);
